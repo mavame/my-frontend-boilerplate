@@ -1,0 +1,23 @@
+{
+  "name": "my-frontend-boilerplate",
+  "version": "0.0.1",
+  "description": "",
+  "main": "index.html",
+  "scripts": {
+    "prestart": "npm install",
+    "start": "npm-run-all --parallel postcss server",
+    "postcss": "postcss -u postcss-import -o public/css/main.css src/css/main.css -w",
+    "server": "browser-sync start -s --files index.html public"
+  },
+  "author": "Matt Van Meter",
+  "license": "ISC",
+  "devDependencies": {
+    "npm-run-all": "^4.0.2",
+    "postcss": "^5.2.15",
+    "postcss-cli": "^3.0.0-beta",
+    "postcss-import": "^9.1.0"
+  },
+  "dependencies": {
+    "normalize.css": "^5.0.0"
+  }
+}
